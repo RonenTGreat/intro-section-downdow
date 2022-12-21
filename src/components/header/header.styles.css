@@ -1,0 +1,54 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  color: hsl(0, 0%, 41%);
+  text-decoration: none;
+}
+
+.logo {
+  margin: 2rem;
+}
+
+.nav{
+  display: flex;
+  justify-content: center;
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+.nav_item {
+  margin: 2rem 1rem;
+}
+
+.arrow-down{
+  margin: 0.2rem;
+}
+
+.register-section{
+  margin: 1rem 2rem;
+}
+
+.register-section__login{
+  margin-right: 3rem;
+}
+
+.register-btn{
+  padding: 0.8rem 1.5rem ;
+  font-size: 1rem;
+  color: hsl(0, 0%, 41%);
+  background-color: white;
+  border: 2px solid hsl(0, 0%, 41%);
+  border-radius: 15px;
+}
+
+.register-btn:hover{
+  cursor: pointer;
+}
