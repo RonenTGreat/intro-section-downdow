@@ -52,3 +52,69 @@ a {
 .register-btn:hover{
   cursor: pointer;
 }
+
+.btn_nav, .sidenav{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header{
+    margin: 2rem
+  }
+  
+  .nav_list, .register-section{
+    display: none;
+  }
+
+  .btn_nav {
+    display: block;
+    position: absolute;
+    top: 1.7rem;
+    right: 0;
+    border: none;
+    color: hsl(240, 100%, 5%);
+  }
+
+  .sidenav {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-left: 1px hsl(236, 13%, 42%) solid;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: hsl(36, 100%, 99%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+  }
+
+  .sidenav div a {
+    margin: 2rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: hsl(240, 100%, 5%);
+    transition: 0.3s;
+  }
+
+  .sidenav .closebtn {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: none;
+  background-color: hsl(36, 100%, 99%);
+  color: hsl(240, 100%, 5%);
+}
+}

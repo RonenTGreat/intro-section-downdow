@@ -4,8 +4,34 @@ import logo from "../../assets/images/logo.svg"
 
 import arrowUp from "../../assets/images/icon-arrow-down.svg"
 
+import iconMenu from "../../assets/images/icon-menu.svg"
+
+import iconMenuClose from "../../assets/images/icon-close-menu.svg"
+
+
 
 const Header = () => {
+
+  function openNav() {
+    document.querySelector(".sidenav").style.width = "70%";
+
+    // Causes page not to scroll when nav is opened
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${window.scrollY}px`;
+    document.body.style.blur = '0.5rem';
+  }
+
+  function closeNav() {
+    document.querySelector(".sidenav").style.width = "0";
+    document.body.style.position = '';
+    document.body.style.top = '';
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  }
+
+
   return (
     <header className="header">
       <nav className="nav">
@@ -21,6 +47,26 @@ const Header = () => {
       <div className="register-section">
         <a className="register-section__login" href="/#">Login</a>
         <a className="register-section__register-btn" href="/#"><button className="register-btn">Register</button></a>
+      </div>
+
+      {/* Hamburger Menu */}
+      <button className="btn_nav" onClick={openNav}>
+        <img src={iconMenu} alt="menu bar" />
+      </button>
+
+      {/* Mobill Menu */}
+
+      <div className="sidenav">
+        <button className="closebtn" onClick={closeNav}>
+          <img src={iconMenuClose} alt="" />
+        </button>
+        <div>
+          <a href="0">Home</a>
+          <a href="0">New</a>
+          <a href="0">Popular</a>
+          <a href="0">Trending</a>
+          <a href="0">Categories</a>
+        </div>
       </div>
     </header>
 
