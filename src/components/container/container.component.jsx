@@ -18,7 +18,7 @@ const Container  = () => {
       <section className="main-section">
         <picture>
           <source media="(max-width:425px)" srcSet={heroMobile} />
-          <img style={{ width: "100%" }} src={heroDesktop} className="body-img" alt="web3 iamge" />
+          <img src={heroDesktop} className="body-img" alt="web3 iamge" />
         </picture>
 
         <div className="content">
