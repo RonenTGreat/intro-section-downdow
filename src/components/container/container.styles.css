@@ -85,11 +85,17 @@
     margin: 0 1.3rem;
   }
 
+  .content__btn{
+    margin-left: 8rem;
+    margin-top: 2rem;
+  }
+
   .content__images{
     width: 100%;
   }
 
   .content__images img{
-    transform: scale(0.9);
+    transform: scale(0.7);
+    margin: 2rem 0rem;
   }
 }
