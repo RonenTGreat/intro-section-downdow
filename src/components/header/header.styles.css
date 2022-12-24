@@ -95,13 +95,12 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    margin-top: 10rem;
   }
 
   .sidenav div a {
-    margin: 2rem;
+    margin: 1rem;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1rem;
     color: hsl(240, 100%, 5%);
     transition: 0.3s;
   }

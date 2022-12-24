@@ -13,7 +13,7 @@ import iconMenuClose from "../../assets/images/icon-close-menu.svg"
 const Header = () => {
 
   function openNav() {
-    document.querySelector(".sidenav").style.width = "70%";
+    document.querySelector(".sidenav").style.width = "50%";
 
     // Causes page not to scroll when nav is opened
     document.body.style.position = 'fixed';
@@ -61,11 +61,16 @@ const Header = () => {
           <img src={iconMenuClose} alt="" />
         </button>
         <div>
-          <a href="0">Home</a>
-          <a href="0">New</a>
-          <a href="0">Popular</a>
-          <a href="0">Trending</a>
-          <a href="0">Categories</a>
+          <a href="/#">Features</a>
+          <a href="/#">Company</a>
+          <a href="/#">Careers</a>
+          <a href="/#">Trending</a>
+          <a href="/#">About</a>
+        </div>
+
+        <div>
+          <a className="" href="/#">Login</a>
+          <a className="" href="/#"><button className="">Register</button></a>
         </div>
       </div>
     </header>
