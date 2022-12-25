@@ -61,16 +61,16 @@ const Header = () => {
           <img src={iconMenuClose} alt="" />
         </button>
         <div>
-          <a href="/#">Features</a>
-          <a href="/#">Company</a>
-          <a href="/#">Careers</a>
-          <a href="/#">Trending</a>
-          <a href="/#">About</a>
+          <a className="mobile_link" href="/#">Features <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a>
+          <a className="mobile_link" href="/#">Company <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a>
+          <a className="mobile_link" href="/#">Careers</a>
+          <a className="mobile_link" href="/#">Trending</a>
+          <a className="mobile_link" href="/#">About</a>
         </div>
 
-        <div>
-          <a className="" href="/#">Login</a>
-          <a className="" href="/#"><button className="">Register</button></a>
+        <div className="mobile-register">
+          <a className="mobile-register__link" href="/#">Login</a>
+          <a className="mobile-register__link" href="/#"><button className="mobile-register__btn">Register</button></a>
         </div>
       </div>
     </header>

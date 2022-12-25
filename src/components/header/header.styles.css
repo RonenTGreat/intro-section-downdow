@@ -13,7 +13,7 @@ a {
   margin: 2rem;
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: center;
 }
@@ -28,20 +28,20 @@ a {
   margin: 2rem 1rem;
 }
 
-.arrow-down{
+.arrow-down {
   margin: 0.2rem;
 }
 
-.register-section{
+.register-section {
   margin: 1rem 2rem;
 }
 
-.register-section__login{
+.register-section__login {
   margin-right: 3rem;
 }
 
-.register-btn{
-  padding: 0.8rem 1.5rem ;
+.register-btn {
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
   color: hsl(0, 0%, 41%);
   background-color: white;
@@ -49,20 +49,22 @@ a {
   border-radius: 15px;
 }
 
-.register-btn:hover{
+.register-btn:hover {
   cursor: pointer;
 }
 
-.btn_nav, .sidenav{
+.btn_nav,
+.sidenav {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .header{
-    margin: 2rem
+  .header {
+    margin: 2rem 1rem 2rem -1rem;
   }
-  
-  .nav_list, .register-section{
+
+  .nav_list,
+  .register-section {
     display: none;
   }
 
@@ -90,30 +92,49 @@ a {
     padding-top: 60px;
   }
 
-  .sidenav div{
+  .sidenav div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    padding-top: 2rem;
   }
 
-  .sidenav div a {
+  .sidenav div .mobile_link {
     margin: 1rem;
     text-decoration: none;
     font-size: 1rem;
-    color: hsl(240, 100%, 5%);
+    color: hsl(0, 0%, 41%);
     transition: 0.3s;
   }
 
   .sidenav .closebtn {
-  display: block;
-  position: absolute;
-  top: 2rem;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-  border: none;
-  background-color: hsl(36, 100%, 99%);
-  color: hsl(240, 100%, 5%);
-}
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    margin-left: 50px;
+    border: none;
+    background-color: hsl(36, 100%, 99%);
+    color: hsl(240, 100%, 5%);
+  }
+
+  .mobile-register {
+    margin: 0;
+  }
+
+  .mobile-register__link {
+    margin: 0 auto;
+  }
+
+  .mobile-register__btn {
+    padding: 0.8rem 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    min-width: 9rem;
+    color: hsl(0, 0%, 41%);
+    background-color: white;
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 15px;
+  }
 }
