@@ -28,8 +28,26 @@ a {
   margin: 2rem 1rem;
 }
 
+.nav_link:hover{
+  color: hsl(0, 0%, 8%);
+}
+
 .arrow-down {
   margin: 0.2rem;
+}
+
+.feature-dropdown{
+  display: none;  
+  padding: 1rem 1.7rem;
+  background-color: white;
+  color: hsl(0, 0%, 41%);
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.feature-dropdown__link{
+  display: block;
+  margin-top: 0.5rem;
 }
 
 .register-section {

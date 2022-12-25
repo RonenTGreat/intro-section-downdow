@@ -31,13 +31,33 @@ const Header = () => {
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 
+  function showFeatureDropdown(){
+    let featureDropdown = document.querySelector(".feature-dropdown");
+    if (featureDropdown.style.display === "none") {
+      featureDropdown.style.display = "block";
+    } else {
+      featureDropdown.style.display = "none";
+    }
+  }
+
 
   return (
     <header className="header">
       <nav className="nav">
         <a href="/#"><img src={logo} alt="logo" className="logo" /></a>
         <ul className="nav_list">
-          <li className="nav_item"><a href="/#" className="nav_link">Features <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a></li>
+          <li className="nav_item"><a onClick={showFeatureDropdown} href="/#" className="nav_link">Features <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a>
+
+          <div className="feature-dropdown">
+            <a href="/#" className="feature-dropdown__link">Todo List</a>
+            <a href="/#" className="feature-dropdown__link">Calendar</a>
+            <a href="/#" className="feature-dropdown__link">Reminder</a>
+            <a href="/#" className="feature-dropdown__link">Planning</a>
+          </div>
+          
+          </li>
+
+
           <li className="nav_item"><a href="/#" className="nav_link">Company <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a></li>
           <li className="nav_item"><a href="/#" className="nav_link">Careers</a></li>
           <li className="nav_item"><a href="/#" className="nav_link">About</a></li>
