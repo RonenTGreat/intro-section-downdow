@@ -26,29 +26,58 @@ a {
 
 .nav_item {
   margin: 2rem 1rem;
+  position: relative;
 }
 
-.nav_link:hover{
+.nav_link:hover {
   color: hsl(0, 0%, 8%);
 }
 
-.arrow-down {
+.feature-arrow-down,
+.company-arrow-down {
   margin: 0.2rem;
 }
 
-.feature-dropdown{
-  display: none;  
+.updown {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  display: none;
+}
+
+.feature-dropdown, .company-dropdown {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1;
   padding: 1rem 1.7rem;
   background-color: white;
   color: hsl(0, 0%, 41%);
-  border: 1px solid black;
   border-radius: 10px;
+  box-shadow: -1px 5px 34px 0px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: -1px 5px 34px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: -1px 5px 34px 0px rgba(0, 0, 0, 0.19);
 }
 
-.feature-dropdown__link{
-  display: block;
-  margin-top: 0.5rem;
+.feature-dropdown__link {
+  display: flex;
+  margin-top: 0.8rem;
 }
+
+.feature-dropdown__link img {
+  margin-right: 0.8rem;
+}
+
+.company-dropdown{
+  right: -2rem;
+}
+
+.company-dropdown p{
+  margin-top: 0.8rem;
+  width: 5rem;
+}
+
 
 .register-section {
   margin: 1rem 2rem;

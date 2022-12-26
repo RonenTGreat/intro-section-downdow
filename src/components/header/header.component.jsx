@@ -8,6 +8,16 @@ import iconMenu from "../../assets/images/icon-menu.svg"
 
 import iconMenuClose from "../../assets/images/icon-close-menu.svg"
 
+import todo from "../../assets/images/icon-todo.svg"
+
+import calendar from "../../assets/images/icon-calendar.svg"
+
+import planning from "../../assets/images/icon-planning.svg"
+
+import reminder from "../../assets/images/icon-reminders.svg"
+
+
+
 
 
 const Header = () => {
@@ -31,13 +41,18 @@ const Header = () => {
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
   }
 
-  function showFeatureDropdown(){
+  function showFeatureDropdown() {
     let featureDropdown = document.querySelector(".feature-dropdown");
-    if (featureDropdown.style.display === "none") {
-      featureDropdown.style.display = "block";
-    } else {
-      featureDropdown.style.display = "none";
-    }
+    featureDropdown.classList.toggle("hidden");
+
+    document.querySelector(".feature-arrow-down").classList.toggle("updown")
+  }
+
+  function showCompanyDropdown() {
+    let companyDropdown = document.querySelector(".company-dropdown");
+    companyDropdown.classList.toggle("hidden");
+
+    document.querySelector(".company-arrow-down").classList.toggle("updown")
   }
 
 
@@ -46,19 +61,26 @@ const Header = () => {
       <nav className="nav">
         <a href="/#"><img src={logo} alt="logo" className="logo" /></a>
         <ul className="nav_list">
-          <li className="nav_item"><a onClick={showFeatureDropdown} href="/#" className="nav_link">Features <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a>
+          <li className="nav_item"><a onClick={showFeatureDropdown} href="/#" className="nav_link">Features <img src={arrowUp} className="feature-arrow-down" alt="arrow-down" /></a>
 
-          <div className="feature-dropdown">
-            <a href="/#" className="feature-dropdown__link">Todo List</a>
-            <a href="/#" className="feature-dropdown__link">Calendar</a>
-            <a href="/#" className="feature-dropdown__link">Reminder</a>
-            <a href="/#" className="feature-dropdown__link">Planning</a>
-          </div>
-          
+            <div className="feature-dropdown hidden">
+              <p className="feature-dropdown__link"><img src={todo} alt="todo" /> Todo List</p>
+              <p className="feature-dropdown__link"><img src={calendar} alt="calendar" />Calendar</p>
+              <p className="feature-dropdown__link"><img src={reminder} alt="reminder" />Reminder</p>
+              <p className="feature-dropdown__link"><img src={planning} alt="planning" />Planning</p>
+            </div>
           </li>
 
 
-          <li className="nav_item"><a href="/#" className="nav_link">Company <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a></li>
+          <li className="nav_item"><a onClick={showCompanyDropdown} href="/#" className="nav_link">Company <img src={arrowUp} className="company-arrow-down" alt="arrow-down" /></a>
+          
+          <div className="company-dropdown hidden">
+            <p>History</p>
+            <p>Our Team</p>
+            <p>Blog</p>
+          </div>
+          
+          </li>
           <li className="nav_item"><a href="/#" className="nav_link">Careers</a></li>
           <li className="nav_item"><a href="/#" className="nav_link">About</a></li>
         </ul>
