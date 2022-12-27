@@ -73,13 +73,13 @@ const Header = () => {
 
 
           <li className="nav_item"><a onClick={showCompanyDropdown} href="/#" className="nav_link">Company <img src={arrowUp} className="company-arrow-down" alt="arrow-down" /></a>
-          
-          <div className="company-dropdown hidden">
-            <p>History</p>
-            <p>Our Team</p>
-            <p>Blog</p>
-          </div>
-          
+
+            <div className="company-dropdown hidden">
+              <p>History</p>
+              <p>Our Team</p>
+              <p>Blog</p>
+            </div>
+
           </li>
           <li className="nav_item"><a href="/#" className="nav_link">Careers</a></li>
           <li className="nav_item"><a href="/#" className="nav_link">About</a></li>
@@ -103,8 +103,24 @@ const Header = () => {
           <img src={iconMenuClose} alt="" />
         </button>
         <div>
-          <a className="mobile_link" href="/#">Features <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a>
-          <a className="mobile_link" href="/#">Company <img src={arrowUp} className="arrow-down" alt="arrow-down" /></a>
+          <a className="mobile_link" href="/#">Features <img src={arrowUp} className="arrow-down" alt="arrow-down" />
+          
+            <div className="">
+              <p className="feature-dropdown__link"><img src={todo} alt="todo" /> Todo List</p>
+              <p className="feature-dropdown__link"><img src={calendar} alt="calendar" />Calendar</p>
+              <p className="feature-dropdown__link"><img src={reminder} alt="reminder" />Reminder</p>
+              <p className="feature-dropdown__link"><img src={planning} alt="planning" />Planning</p>
+            </div>
+          
+          </a>
+          <a className="mobile_link" href="/#">Company <img src={arrowUp} className="arrow-down" alt="arrow-down" />
+          
+            <div className="">
+              <p>History</p>
+              <p>Our Team</p>
+              <p>Blog</p>
+            </div>
+          </a>
           <a className="mobile_link" href="/#">Careers</a>
           <a className="mobile_link" href="/#">Trending</a>
           <a className="mobile_link" href="/#">About</a>
