@@ -139,7 +139,7 @@ a {
     padding-top: 60px;
   }
 
-  .sidenav div {
+  .sidenav .container, .mobile-register {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -147,10 +147,11 @@ a {
     padding-top: 2rem;
   }
 
-  .sidenav div .mobile_link {
+
+  .sidenav .container .mobile_link {
     margin: 1rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: hsl(0, 0%, 41%);
     transition: 0.3s;
   }
@@ -183,5 +184,14 @@ a {
     background-color: white;
     border: 2px solid hsl(0, 0%, 41%);
     border-radius: 15px;
+  }
+
+  div.mobile-feature-down{
+    margin-left: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .feature-dropdown__link{
+    margin-top: 1.2rem;
   }
 }

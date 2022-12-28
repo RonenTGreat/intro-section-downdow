@@ -48,12 +48,21 @@ const Header = () => {
     document.querySelector(".feature-arrow-down").classList.toggle("updown")
   }
 
+  function mobileShowFeatureDropdown() {
+    let featureDropdown = document.querySelector(".mobile-feature-down");
+    featureDropdown.classList.toggle("hidden");
+
+    document.querySelector(".mobile-feature-arrow-down").classList.toggle("updown")
+  }
+
   function showCompanyDropdown() {
     let companyDropdown = document.querySelector(".company-dropdown");
     companyDropdown.classList.toggle("hidden");
 
     document.querySelector(".company-arrow-down").classList.toggle("updown")
   }
+
+
 
 
   return (
@@ -102,10 +111,10 @@ const Header = () => {
         <button className="closebtn" onClick={closeNav}>
           <img src={iconMenuClose} alt="" />
         </button>
-        <div>
-          <a className="mobile_link" href="/#">Features <img src={arrowUp} className="arrow-down" alt="arrow-down" />
+        <div className="container">
+          <a className="mobile_link" href="/#" onClick={mobileShowFeatureDropdown}>Features <img src={arrowUp} className="mobile-feature-arrow-down" alt="arrow-down" />
           
-            <div className="">
+            <div className="mobile-feature-down hidden">
               <p className="feature-dropdown__link"><img src={todo} alt="todo" /> Todo List</p>
               <p className="feature-dropdown__link"><img src={calendar} alt="calendar" />Calendar</p>
               <p className="feature-dropdown__link"><img src={reminder} alt="reminder" />Reminder</p>
