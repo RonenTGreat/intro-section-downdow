@@ -62,6 +62,13 @@ const Header = () => {
     document.querySelector(".company-arrow-down").classList.toggle("updown")
   }
 
+  function mobileShowCompanyDropdown() {
+    let companyDropdown = document.querySelector(".mobile-company-down");
+    companyDropdown.classList.toggle("hidden");
+
+    document.querySelector(".mobile-company-arrow-down").classList.toggle("updown")
+  }
+
 
 
 
@@ -113,18 +120,18 @@ const Header = () => {
         </button>
         <div className="container">
           <a className="mobile_link" href="/#" onClick={mobileShowFeatureDropdown}>Features <img src={arrowUp} className="mobile-feature-arrow-down" alt="arrow-down" />
-          
+
             <div className="mobile-feature-down hidden">
               <p className="feature-dropdown__link"><img src={todo} alt="todo" /> Todo List</p>
               <p className="feature-dropdown__link"><img src={calendar} alt="calendar" />Calendar</p>
               <p className="feature-dropdown__link"><img src={reminder} alt="reminder" />Reminder</p>
               <p className="feature-dropdown__link"><img src={planning} alt="planning" />Planning</p>
             </div>
-          
+
           </a>
-          <a className="mobile_link" href="/#">Company <img src={arrowUp} className="arrow-down" alt="arrow-down" />
-          
-            <div className="">
+          <a className="mobile_link" onClick={mobileShowCompanyDropdown} href="/#">Company <img src={arrowUp} className="mobile-company-arrow-down" alt="arrow-down" />
+
+            <div className="mobile-company-down hidden">
               <p>History</p>
               <p>Our Team</p>
               <p>Blog</p>

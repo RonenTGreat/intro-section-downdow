@@ -46,7 +46,8 @@ a {
   display: none;
 }
 
-.feature-dropdown, .company-dropdown {
+.feature-dropdown,
+.company-dropdown {
   position: absolute;
   top: 1.5rem;
   right: 2rem;
@@ -69,15 +70,14 @@ a {
   margin-right: 0.8rem;
 }
 
-.company-dropdown{
+.company-dropdown {
   right: -2rem;
 }
 
-.company-dropdown p{
+.company-dropdown p {
   margin-top: 0.8rem;
   width: 5rem;
 }
-
 
 .register-section {
   margin: 1rem 2rem;
@@ -107,7 +107,7 @@ a {
 
 @media (max-width: 768px) {
   .header {
-    margin: 2rem 1rem 2rem -1rem;
+    margin: 0 1rem 2rem -1rem;
   }
 
   .nav_list,
@@ -139,14 +139,14 @@ a {
     padding-top: 60px;
   }
 
-  .sidenav .container, .mobile-register {
+  .sidenav .container,
+  .mobile-register {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
     padding-top: 2rem;
   }
-
 
   .sidenav .container .mobile_link {
     margin: 1rem;
@@ -186,12 +186,19 @@ a {
     border-radius: 15px;
   }
 
-  div.mobile-feature-down{
+  div.mobile-feature-down,
+  div.mobile-company-down {
     margin-left: 1rem;
     padding-top: 0.5rem;
   }
 
-  .feature-dropdown__link{
+  .feature-dropdown__link,
+  .mobile-company-down p {
     margin-top: 1.2rem;
+  }
+
+  .mobile-feature-arrow-down,
+  .mobile-company-arrow-down {
+    margin-left: 0.5rem
   }
 }
