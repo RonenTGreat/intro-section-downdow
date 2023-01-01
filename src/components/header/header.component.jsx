@@ -22,8 +22,15 @@ import reminder from "../../assets/images/icon-reminders.svg"
 
 const Header = () => {
 
+  function toggleOverlay() {
+    const overlay = document.querySelector('.overlay');
+    overlay.classList.toggle('hidden')
+  }
+
   function openNav() {
     document.querySelector(".sidenav").style.width = "50%";
+
+    toggleOverlay()
 
     // Causes page not to scroll when nav is opened
     document.body.style.position = 'fixed';
@@ -39,6 +46,8 @@ const Header = () => {
     document.body.style.position = '';
     document.body.style.top = '';
     window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+    toggleOverlay()
   }
 
   function showFeatureDropdown() {
@@ -113,6 +122,8 @@ const Header = () => {
       </button>
 
       {/* Mobill Menu */}
+
+      <div className="overlay hidden" onClick={closeNav}></div>
 
       <div className="sidenav">
         <button className="closebtn" onClick={closeNav}>
