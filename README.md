@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/news-homepage-4YNJ7_auVz)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-AdqCo8NHYI)
 - Live Site URL: [Live site URL here](https://intro-section-dropdown-omega.vercel.app/)
 
 ## My process
